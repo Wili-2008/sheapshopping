@@ -1,0 +1,31 @@
+### Listar detalles, opcionalmente filtrados por pedido
+GET http://sheapshopping.com/backend/listardetallepedidos?id_pedido=1
+Accept: application/json
+
+### Agregar una variante a un pedido pendiente
+POST http://sheapshopping.com/backend/agregar_detallepedido
+Content-Type: application/json
+
+{
+  "id_pedido": 1,
+  "id_inventario": 2,
+  "cantidad": 1
+}
+
+### Actualizar un detalle (stock y total del pedido se recalculan)
+PUT http://sheapshopping.com/backend/update_detallepedido
+Content-Type: application/json
+
+{
+  "id_detalle": 1,
+  "id_inventario": 2,
+  "cantidad": 2
+}
+
+### Eliminar un detalle
+DELETE http://sheapshopping.com/backend/delete_detallepedido
+Content-Type: application/json
+
+{
+  "id_detalle": 1
+}

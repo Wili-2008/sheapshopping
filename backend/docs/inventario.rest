@@ -1,0 +1,31 @@
+### Listar todas las variantes o filtrar por producto
+GET http://sheapshopping.com/backend/listar_inventario?id_producto=1
+Accept: application/json
+
+### Registrar una variante (producto+talla)
+POST http://sheapshopping.com/backend/agregar_inventario
+Content-Type: application/json
+
+{
+  "id_producto": 1,
+  "talla": "M",
+  "stock": 20
+}
+
+### Actualizar talla o stock
+PUT http://sheapshopping.com/backend/update_inventario
+Content-Type: application/json
+
+{
+  "id_inventario": 2,
+  "talla": "M",
+  "stock": 20
+}
+
+### Eliminar variante
+DELETE http://sheapshopping.com/backend/delete_inventario
+Content-Type: application/json
+
+{
+  "id_inventario": 2
+}

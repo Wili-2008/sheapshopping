@@ -1,0 +1,28 @@
+### Listar categorías
+GET http://sheapshopping.com/backend/listarcategorias
+Accept: application/json
+
+### Crear categoría
+POST http://sheapshopping.com/backend/agregar_categoria
+Content-Type: application/json
+
+{
+  "nombre": "Abrigos"
+}
+
+### Actualizar categoría
+PUT http://sheapshopping.com/backend/update_categoria
+Content-Type: application/json
+
+{
+  "id_categoria": 1,
+  "nombre": "Poleras"
+}
+
+### Eliminar categoría
+DELETE http://sheapshopping.com/backend/delete_categoria
+Content-Type: application/json
+
+{
+  "id_categoria": 1
+}

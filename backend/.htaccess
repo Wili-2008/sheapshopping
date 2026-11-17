@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Si el archivo o carpeta existe, no redirigir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todo a routes/api.php manteniendo la query string
+RewriteRule ^(.*)$ routes/api.php [QSA,L]

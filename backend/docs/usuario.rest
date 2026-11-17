@@ -1,0 +1,33 @@
+### Listar usuarios
+GET http://sheapshopping.com/backend/listar_usuarios
+Accept: application/json
+
+### Registrar usuario
+POST http://sheapshopping.com/backend/agregar_usuario
+Content-Type: application/json
+
+{
+  "nombre": "julio",
+  "correo": "julio@gmail.com",
+  "contrasena": "julio123",
+  "rol": "admin"
+}
+
+### Actualizar usuario (contrasena es opcional)
+PUT http://sheapshopping.com/backend/update_usuario
+Content-Type: application/json
+
+{
+  "id_usuario": 3,
+  "nombre": "Nombre Apellido",
+  "correo": "persona@example.com",
+  "rol": "cliente"
+}
+
+### Eliminar usuario
+DELETE http://sheapshopping.com/backend/delete_usuario
+Content-Type: application/json
+
+{
+  "id_usuario": 4
+}

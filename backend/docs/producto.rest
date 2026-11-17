@@ -1,0 +1,38 @@
+### Listar productos (stock es la suma de variantes)
+GET http://sheapshopping.com/backend/listarproductos
+Accept: application/json
+
+### Crear producto
+POST http://sheapshopping.com/backend/agregar_producto
+Content-Type: application/json
+
+{
+  "id_categoria": 1,
+  "nombre": "Polera de ejemplo",
+  "descripcion": "Descripción del producto",
+  "precio": 85.00,
+  "imagen": "imagenes/polera.jpg",
+  "activo": 1
+}
+
+### Actualizar producto
+PUT http://sheapshopping.com/backend/update_producto
+Content-Type: application/json
+
+{
+  "id_producto": 1,
+  "id_categoria": 1,
+  "nombre": "Polera de ejemplo",
+  "descripcion": "Descripción actualizada",
+  "precio": 85.00,
+  "imagen": "imagenes/polera.jpg",
+  "activo": 1
+}
+
+### Eliminar producto
+DELETE http://sheapshopping.com/backend/delete_producto
+Content-Type: application/json
+
+{
+  "id_producto": 1
+}
